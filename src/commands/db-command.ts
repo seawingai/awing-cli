@@ -1,12 +1,13 @@
 import { Command } from 'commander';
-import { join } from 'path';
 import { DbSeedCommandOption, DbSeedRunner } from '@/runners/db/db-seed-runner';
 import { DbMigrateCommandOptions, DbMigrateRunner } from '@/runners/db/db-migrate-runner';
 import { DbSchemaRunner } from '@/runners/db/db-schema-runner';
-import { JsonFile } from '@/common/json/json-file';
+import { Config } from '@/common/app/config';
+import { SaasFolder } from '@/common/app/saas-folder';
 
 export function DbCommand(): Command {
-  const servicesDir = join(JsonFile.instance.get('saasRoot') ?? process.cwd(), 'services');
+  const folder = new SaasFolder();
+  const servicesDir = folder.apps;
 
   const command = new Command('db')
     .description('db related commands');

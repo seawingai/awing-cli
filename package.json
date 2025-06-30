@@ -15,8 +15,8 @@
     "db:mp": "npx ts-node -r tsconfig-paths/register src/cli.ts db migrate --env=prod",
     "db:seed": "npx ts-node -r tsconfig-paths/register src/cli.ts db schema",
     "db:su": "npx ts-node -r tsconfig-paths/register src/cli.ts db seed up",
-    "g:saas": "npx ts-node -r tsconfig-paths/register src/cli.ts g saas abc1 --baseDir=C:\\data\\seawingai\\git",
-    "g:s": "npx ts-node -r tsconfig-paths/register src/cli.ts g service auth-service --baseDir=C:\\data\\seawingai\\git\\abc1"
+    "g:saas": "npx ts-node -r tsconfig-paths/register src/cli.ts g saas awing",
+    "g:s": "npx ts-node -r tsconfig-paths/register src/cli.ts g service auth-service"
   },
   "dependencies": {
     "@types/bcryptjs": "^2.4.6",

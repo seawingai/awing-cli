@@ -18,9 +18,10 @@ export function GenerateCommand(): Command {
 
     command
     .command('service <name>')
+    .option('--saasName <saasName>', 'Name of SaaS in which service will be created')
     .option('--baseDir <baseDir>', 'Base directory for the SaaS')
     .description('Creates a service with specified name')
-    .action(async (name: string, opt: {baseDir?: string}) => {
+    .action(async (name: string, opt: {saasName?: string, baseDir?: string}) => {
       const options = new GenerateCommandOption('service', name, opt);
       const runner = new GenerateRunner(options);
       await runner.run();

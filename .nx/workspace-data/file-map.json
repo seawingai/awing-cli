@@ -31,32 +31,36 @@
         "hash": "12923686609428185464"
       },
       {
-        "file": "awing-config.json",
+        "file": "awing.json",
         "hash": "3691503588255798231"
       },
       {
         "file": "package.json",
-        "hash": "50149675058724320"
+        "hash": "8181785474239509186"
       },
       {
         "file": "pnpm-lock.yaml",
         "hash": "1285332937983515274"
       },
       {
+        "file": "scripts/del-abc.ps1",
+        "hash": "15891259060343943843"
+      },
+      {
         "file": "src/cli.ts",
-        "hash": "7620425910454699540"
+        "hash": "4501576859054368682"
       },
       {
         "file": "src/commands/config-command.ts",
-        "hash": "15270691011981721403"
+        "hash": "2674392394594331362"
       },
       {
         "file": "src/commands/db-command.ts",
-        "hash": "14141706137685137586"
+        "hash": "13850296477144761278"
       },
       {
-        "file": "src/commands/saas-command.ts",
-        "hash": "3664898731449621268"
+        "file": "src/commands/generate-command.ts",
+        "hash": "2323873941843208846"
       },
       {
         "file": "src/common/json/json-file.ts",
@@ -68,7 +72,7 @@
       },
       {
         "file": "src/common/types/constants.ts",
-        "hash": "6809441757032847167"
+        "hash": "13565484868720656616"
       },
       {
         "file": "src/runners/db/db-migrate-runner.ts",
@@ -83,8 +87,8 @@
         "hash": "13599169939987726493"
       },
       {
-        "file": "src/runners/saas/saas-create-runner.ts",
-        "hash": "11422771398669914883"
+        "file": "src/runners/generate/generate-runner.ts",
+        "hash": "15504265544206231452"
       },
       {
         "file": "tsconfig.json",

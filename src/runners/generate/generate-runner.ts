@@ -1,37 +1,27 @@
-import { join } from 'path';
+import fs from 'fs'
 import { Process } from '@/common/process/process';
+import { SaasFolder } from '@/common/app/saas-folder';
 
 export class GenerateCommandOption {
   type: string;
   name: string;
-  baseDir: string;
+  saasFolder: SaasFolder;
   
-  constructor(type: string, name: string, options: { baseDir?: string}) {
+  constructor(type: string, name: string, options: { saasName?: string, baseDir?: string }) {
     this.type = type;
     this.name = name;
-    this.baseDir = options.baseDir ?? this.defaultBaseDir;
-  }
-
-  get defaultBaseDir(): string {
-    return process.env.BASE_DIR || process.cwd();
+    this.saasFolder = new SaasFolder(options.saasName, options.baseDir)
   }
 
   get targetDir(): string {
-    switch (this.type) {
-      case 'saas':
-        return join(this.baseDir, this.name);
-      case 'service':
-        return join(this.baseDir, 'services', this.name);
-      default:
-        return join(this.baseDir, this.name);
-    }
+    return this.saasFolder.targetDir(this.type);
   }
 
   toString(): string {
     return `${this.constructor.name} {
+        type: ${this.type},
         name: ${this.name},
-        baseDir: ${this.baseDir},
-        targetDir: ${this.targetDir}
+        saasFolder: ${this.saasFolder}
       }`;
   }
 }
@@ -44,7 +34,15 @@ export class GenerateRunner {
     this.options = options;
   }
 
+  private ensureDir(dir: string) {
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir, { recursive: true });
+      console.info(`Creating dir: ${dir}`);
+    }
+  }
+
   public async run() {
+    console.info(`Started Generating ${this.options}`);
     console.info(`Generating ${this.options.type} in: ${this.options.targetDir}`);
 
     switch (this.options.type) {
@@ -76,14 +74,17 @@ export class GenerateRunner {
       '--no-interactive'
     ].join(' ');
 
-    this.process.exec(command, true, this.options.baseDir);
+    this.process.exec(command, true, this.options.saasFolder.baseDir);
 
     this.process.exec(`pnpm add -D @nx/node`, true, this.options.targetDir);
+
+    this.ensureDir(this.options.saasFolder.apps);
+    this.ensureDir(this.options.saasFolder.libs);
   }
 
   createService(name: string) {
     let command = [
-      `npx nx g @nx/node:app ./services/${name}`,
+      `npx nx g @nx/node:app ./${name}`,
       '--framework=fastify',
       '--unitTestRunner=jest',
       '--eslint=false',
@@ -94,6 +95,7 @@ export class GenerateRunner {
       '--no-interactive'
     ].join(' ');
 
+    this.ensureDir(this.options.targetDir)
     this.process.exec(command, true, this.options.targetDir);
   }
 }

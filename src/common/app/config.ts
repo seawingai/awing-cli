@@ -1,7 +1,9 @@
 import * as fs from 'fs';
-import { Config } from '../types/constants';
+import { SaasFolder } from './saas-folder';
+import path from "path";
 
-export class JsonFile {
+export class Config {
+  static readonly CONFIG_FILE = path.resolve(process.cwd(), 'awing.json');
   private filePath: string;
   private data: Record<string, any> = {};
 
@@ -44,12 +46,17 @@ export class JsonFile {
     return { ...this.data };
   }
 
-  private static _instance: JsonFile | null = null;
+  public get baseDir(): string {
+    let baseDir = this.get('baseDir');
 
-  public static get instance(): JsonFile {
-    if (!JsonFile._instance) {
-      JsonFile._instance = new JsonFile(Config.CONFIG_FILE);
+    if (baseDir) {
+      return baseDir
     }
-    return JsonFile._instance;
+
+    return process.env.BASE_DIR ?? process.cwd();
+  }
+
+  public get saasName(): string {
+    return this.get('saasName') ?? "saas";
   }
 } 
