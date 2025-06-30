@@ -1,0 +1,45 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Attach",
+            "port": 9229,
+            "request": "attach",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "node"
+        },
+        {
+            "type": "node-terminal",
+            "name": "npm run dev",
+            "request": "launch",
+            "command": "npm run dev",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "node-terminal",
+            "name": "db:migrate",
+            "request": "launch",
+            "command": "npx ts-node -r tsconfig-paths/register src/cli.ts db migrate --env=dev",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "node-terminal",
+            "name": "db:seed-up",
+            "request": "launch",
+            "command": "npx ts-node -r tsconfig-paths/register src/cli.ts db:seed up",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "node-terminal",
+            "name": "saas:create",
+            "request": "launch",
+            "command": "npx ts-node -r tsconfig-paths/register src/cli.ts saas create",
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}

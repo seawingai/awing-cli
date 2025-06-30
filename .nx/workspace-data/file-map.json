@@ -1,0 +1,95 @@
+{
+  "version": "6.0",
+  "nxVersion": "21.2.1",
+  "pathMappings": {
+    "@/*": [
+      "src/*"
+    ]
+  },
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "projectFileMap": {},
+    "nonProjectFiles": [
+      {
+        "file": ".gitattributes",
+        "hash": "13194702717607086212"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "13404745306227114823"
+      },
+      {
+        "file": ".vscode/launch.json",
+        "hash": "15958134278624664357"
+      },
+      {
+        "file": "LICENSE",
+        "hash": "6141806750151804828"
+      },
+      {
+        "file": "README.md",
+        "hash": "12923686609428185464"
+      },
+      {
+        "file": "awing-config.json",
+        "hash": "3691503588255798231"
+      },
+      {
+        "file": "package.json",
+        "hash": "50149675058724320"
+      },
+      {
+        "file": "pnpm-lock.yaml",
+        "hash": "1285332937983515274"
+      },
+      {
+        "file": "src/cli.ts",
+        "hash": "7620425910454699540"
+      },
+      {
+        "file": "src/commands/config-command.ts",
+        "hash": "15270691011981721403"
+      },
+      {
+        "file": "src/commands/db-command.ts",
+        "hash": "14141706137685137586"
+      },
+      {
+        "file": "src/commands/saas-command.ts",
+        "hash": "3664898731449621268"
+      },
+      {
+        "file": "src/common/json/json-file.ts",
+        "hash": "9496771154872626743"
+      },
+      {
+        "file": "src/common/process/process.ts",
+        "hash": "17133739293374669986"
+      },
+      {
+        "file": "src/common/types/constants.ts",
+        "hash": "6809441757032847167"
+      },
+      {
+        "file": "src/runners/db/db-migrate-runner.ts",
+        "hash": "3626942742939001803"
+      },
+      {
+        "file": "src/runners/db/db-schema-runner.ts",
+        "hash": "17016725129864995909"
+      },
+      {
+        "file": "src/runners/db/db-seed-runner.ts",
+        "hash": "13599169939987726493"
+      },
+      {
+        "file": "src/runners/saas/saas-create-runner.ts",
+        "hash": "11422771398669914883"
+      },
+      {
+        "file": "tsconfig.json",
+        "hash": "2144433073988914591"
+      }
+    ]
+  }
+}

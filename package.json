@@ -1,0 +1,55 @@
+{
+  "name": "awing-cli",
+  "version": "1.0.0",
+  "description": "awing framework cli",
+  "main": "dist/cli.js",
+  "type": "commonjs",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/cli.js",
+    "dev": "ts-node-dev --respawn --transpile-only src/cli.ts",
+    "test": "jest",
+    "help": "npx ts-node -r tsconfig-paths/register src/cli.ts",
+    "con:l": "npx ts-node -r tsconfig-paths/register src/cli.ts cfg list",
+    "db:m": "npx ts-node -r tsconfig-paths/register src/cli.ts db migrate --env=dev",
+    "db:mp": "npx ts-node -r tsconfig-paths/register src/cli.ts db migrate --env=prod",
+    "db:seed": "npx ts-node -r tsconfig-paths/register src/cli.ts db schema",
+    "db:su": "npx ts-node -r tsconfig-paths/register src/cli.ts db seed up",
+    "g:saas": "npx ts-node -r tsconfig-paths/register src/cli.ts g saas abc1 --baseDir=C:\\data\\seawingai\\git",
+    "g:s": "npx ts-node -r tsconfig-paths/register src/cli.ts g service auth-service --baseDir=C:\\data\\seawingai\\git\\abc1"
+  },
+  "dependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "bcryptjs": "^3.0.2",
+    "commander": "^14.0.0",
+    "g": "^2.0.1",
+    "nx": "^21.2.1",
+    "pino": "^8.16.2",
+    "pino-pretty": "^10.3.1",
+    "uuid": "^9.0.1",
+    "zod": "^3.25.67"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.1",
+    "@types/uuid": "^9.0.7",
+    "@types/ws": "^8.18.1",
+    "ts-node-dev": "^2.0.0",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.8.3"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "testMatch": [
+      "**/__tests__/**/*.ts",
+      "**/?(*.)+(spec|test).ts"
+    ]
+  },
+  "bin": {
+    "wing": "dist/cli.js"
+  },
+  "keywords": [],
+  "author": "Rafey Husain Syed",
+  "license": "ISC",
+  "packageManager": "pnpm@10.11.1"
+}
