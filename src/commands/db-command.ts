@@ -2,7 +2,6 @@ import { Command } from 'commander';
 import { DbSeedCommandOption, DbSeedRunner } from '@/runners/db/db-seed-runner';
 import { DbMigrateCommandOptions, DbMigrateRunner } from '@/runners/db/db-migrate-runner';
 import { DbSchemaRunner } from '@/runners/db/db-schema-runner';
-import { Config } from '@/common/app/config';
 import { SaasFolder } from '@/common/app/saas-folder';
 
 export function DbCommand(): Command {

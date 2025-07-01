@@ -7,7 +7,7 @@ export class GenerateCommandOption {
   name: string;
   saasFolder: SaasFolder;
   
-  constructor(type: string, name: string, options: { saasName?: string, baseDir?: string }) {
+  constructor(type: string, name: string, options: { saasName?: string; baseDir?: string}) {
     this.type = type;
     this.name = name;
     this.saasFolder = new SaasFolder(options.saasName, options.baseDir)
@@ -15,6 +15,59 @@ export class GenerateCommandOption {
 
   get targetDir(): string {
     return this.saasFolder.targetDir(this.type);
+  }
+
+  get command(): string {
+    let command: string;
+
+    switch (this.type) {
+      case 'saas':
+        command = [
+          `npx create-nx-workspace@latest ${this.name}`,
+          `--name=${this.name}`,
+          '--preset=apps',
+          '--unitTestRunner=none',
+          '--eslint=false',
+          '--prettier=false',
+          '--ci=skip',
+          '--cache=true',
+          '--packageManager=pnpm',
+          '--no-interactive',
+           `--tags=saas`,
+        ].join(' ');
+        break;
+      case 'service':
+        command = [
+          `npx nx g @nx/node:app ./services/${this.name}`,
+          '--framework=fastify',
+          '--unitTestRunner=none',
+          '--eslint=false',
+          '--prettier=false',
+          '--ci=skip',
+          '--cache=true',
+          '--packageManager=pnpm',
+          '--no-interactive',
+          `--tags=service`
+        ].join(' ');
+        break;
+      case 'lib':
+        command = [
+          `npx nx g @nx/js:lib ./common/${this.name}`,
+          '--unitTestRunner=jest',
+          '--eslint=false',
+          '--prettier=false',
+          '--ci=skip',
+          '--cache=true',
+          '--packageManager=pnpm',
+          '--no-interactive',
+          `--tags=lib`
+        ].join(' ');
+        break;
+      default:
+        throw new Error(`Unknown type: ${this.type}`);
+    }
+
+    return command;
   }
 
   toString(): string {
@@ -42,15 +95,16 @@ export class GenerateRunner {
   }
 
   public async run() {
-    console.info(`Started Generating ${this.options}`);
+    console.info(`Started Generating\n${this.options}`);
     console.info(`Generating ${this.options.type} in: ${this.options.targetDir}`);
 
     switch (this.options.type) {
       case 'saas':
-        this.createWorkspace(this.options.name);
+        this.createSaas();
         break;
       case 'service':
-        this.createService(this.options.name);
+      case 'lib':
+        this.createPreset();
         break;
       default:
         console.error(`Invalid ${this.options.type}`);
@@ -60,21 +114,8 @@ export class GenerateRunner {
     console.info(`Finished generating ${this.options.type} in: ${this.options.targetDir}`);
   }
 
-  createWorkspace(name: string) {
-    let command = [
-      `npx create-nx-workspace@latest ${name}`,
-      `--name=${name}`,
-      '--preset=apps',
-      '--unitTestRunner=none',
-      '--eslint=false',
-      '--prettier=false',
-      '--ci=skip',
-      '--cache=true',
-      '--packageManager=pnpm',
-      '--no-interactive'
-    ].join(' ');
-
-    this.process.exec(command, true, this.options.saasFolder.baseDir);
+  createSaas() {
+    this.process.exec(this.options.command, true, this.options.saasFolder.baseDir);
 
     this.process.exec(`pnpm add -D @nx/node`, true, this.options.targetDir);
 
@@ -82,20 +123,8 @@ export class GenerateRunner {
     this.ensureDir(this.options.saasFolder.libs);
   }
 
-  createService(name: string) {
-    let command = [
-      `npx nx g @nx/node:app ./${name}`,
-      '--framework=fastify',
-      '--unitTestRunner=jest',
-      '--eslint=false',
-      '--prettier=false',
-      '--ci=skip',
-      '--cache=true',
-      '--packageManager=pnpm',
-      '--no-interactive'
-    ].join(' ');
-
+  createPreset() {
     this.ensureDir(this.options.targetDir)
-    this.process.exec(command, true, this.options.targetDir);
+    this.process.exec(this.options.command, true, this.options.targetDir);
   }
 }

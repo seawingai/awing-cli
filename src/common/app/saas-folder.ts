@@ -38,6 +38,8 @@ export class SaasFolder {
         return this.saasDir;
       case 'service':
         return this.apps;
+      case 'lib':
+          return this.libs;
       default:
         throw Error(`Invalid type: ${type}`)
     }
