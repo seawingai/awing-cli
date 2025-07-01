@@ -52,7 +52,7 @@ export class GenerateCommandOption {
         break;
       case 'lib':
         command = [
-          `npx nx g @nx/js:lib ./common/${this.name}`,
+          `npx nx g @nx/js:lib ./backend/frameworks/awing/shared/${this.name}`,
           '--unitTestRunner=jest',
           '--eslint=false',
           '--prettier=false',

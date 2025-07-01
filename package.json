@@ -16,8 +16,8 @@
     "db:seed": "npx ts-node -r tsconfig-paths/register src/cli.ts db schema",
     "db:su": "npx ts-node -r tsconfig-paths/register src/cli.ts db seed up",
     "g:saas": "npx ts-node -r tsconfig-paths/register src/cli.ts g saas awing",
-    "g:s": "npx ts-node -r tsconfig-paths/register src/cli.ts g service auth-service",
-    "g:l": "npx ts-node -r tsconfig-paths/register src/cli.ts g lib env4"
+    "g:s": "npx ts-node -r tsconfig-paths/register src/cli.ts g service settings-service",
+    "g:l": "npx ts-node -r tsconfig-paths/register src/cli.ts g lib awing-core"
   },
   "dependencies": {
     "@types/bcryptjs": "^2.4.6",
