@@ -65,6 +65,18 @@
           "hash": "8855217736457426299"
         },
         {
+          "file": "data/templates/lib/default/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "data/templates/saas/default/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "data/templates/service/default/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
           "file": "eslint.config.mjs",
           "hash": "12748119778616337778",
           "deps": [
@@ -85,7 +97,7 @@
         },
         {
           "file": "package.json",
-          "hash": "8359585247106290904",
+          "hash": "6457807096962070087",
           "deps": [
             "npm:@eslint/js",
             "npm:@nx/esbuild",
@@ -102,7 +114,6 @@
             "npm:@types/node",
             "npm:@vitest/coverage-v8",
             "npm:@vitest/ui",
-            "npm:esbuild",
             "npm:eslint",
             "npm:eslint-config-prettier",
             "npm:jiti",
@@ -115,16 +126,12 @@
             "npm:typescript-eslint",
             "npm:vite",
             "npm:vitest",
-            "npm:@fastify/autoload",
-            "npm:@fastify/sensible",
-            "npm:commander",
-            "npm:fastify",
-            "npm:fastify-plugin"
+            "npm:commander"
           ]
         },
         {
           "file": "pnpm-lock.yaml",
-          "hash": "17465255749166431935"
+          "hash": "8264584619081280446"
         },
         {
           "file": "project.json",
@@ -228,7 +235,7 @@
         },
         {
           "file": "src/commands/generate/lib/generate-lib-command-option.ts",
-          "hash": "15931152648519630273"
+          "hash": "8004039271724498996"
         },
         {
           "file": "src/commands/generate/lib/generate-lib-runner.ts",
