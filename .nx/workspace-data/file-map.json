@@ -54,7 +54,7 @@
         },
         {
           "file": ".vscode/launch.json",
-          "hash": "16078720674550438639"
+          "hash": "14323632693353843554"
         },
         {
           "file": "LICENSE",
@@ -63,38 +63,6 @@
         {
           "file": "README.md",
           "hash": "8855217736457426299"
-        },
-        {
-          "file": "__template/.editorconfig",
-          "hash": "5443105041930014821"
-        },
-        {
-          "file": "__template/.gitignore",
-          "hash": "18435103667633526488"
-        },
-        {
-          "file": "__template/.npmrc",
-          "hash": "1880664178033616490"
-        },
-        {
-          "file": "__template/.vscode/extensions.json",
-          "hash": "4134969992917317260"
-        },
-        {
-          "file": "__template/README.md",
-          "hash": "8989815716845563049"
-        },
-        {
-          "file": "__template/nx.json",
-          "hash": "7396505290730967976"
-        },
-        {
-          "file": "__template/package.json",
-          "hash": "14034488263634520755"
-        },
-        {
-          "file": "__template/pnpm-lock.yaml",
-          "hash": "14590838583663998678"
         },
         {
           "file": "eslint.config.mjs",
@@ -113,11 +81,11 @@
         },
         {
           "file": "nx.json",
-          "hash": "1426250821205457904"
+          "hash": "12182310490783192840"
         },
         {
           "file": "package.json",
-          "hash": "6457807096962070087",
+          "hash": "8359585247106290904",
           "deps": [
             "npm:@eslint/js",
             "npm:@nx/esbuild",
@@ -134,6 +102,7 @@
             "npm:@types/node",
             "npm:@vitest/coverage-v8",
             "npm:@vitest/ui",
+            "npm:esbuild",
             "npm:eslint",
             "npm:eslint-config-prettier",
             "npm:jiti",
@@ -146,12 +115,16 @@
             "npm:typescript-eslint",
             "npm:vite",
             "npm:vitest",
-            "npm:commander"
+            "npm:@fastify/autoload",
+            "npm:@fastify/sensible",
+            "npm:commander",
+            "npm:fastify",
+            "npm:fastify-plugin"
           ]
         },
         {
           "file": "pnpm-lock.yaml",
-          "hash": "8264584619081280446"
+          "hash": "17465255749166431935"
         },
         {
           "file": "project.json",
@@ -185,11 +158,11 @@
         },
         {
           "file": "src/commands/core/core-options.ts",
-          "hash": "3384978851153522097"
+          "hash": "10627729766747579941"
         },
         {
           "file": "src/commands/core/core-runner.ts",
-          "hash": "3588456335013394724"
+          "hash": "15930276848210132573"
         },
         {
           "file": "src/commands/core/dir.ts",
@@ -255,15 +228,15 @@
         },
         {
           "file": "src/commands/generate/lib/generate-lib-command-option.ts",
-          "hash": "15476534924879239005"
+          "hash": "15931152648519630273"
         },
         {
           "file": "src/commands/generate/lib/generate-lib-runner.ts",
-          "hash": "7307332242449827936"
+          "hash": "5414253902462802576"
         },
         {
           "file": "src/commands/generate/saas/generate-saas-command-option.ts",
-          "hash": "5481555926021926404"
+          "hash": "17680071548920988297"
         },
         {
           "file": "src/commands/generate/saas/generate-saas-runner.ts",
@@ -271,11 +244,11 @@
         },
         {
           "file": "src/commands/generate/service/generate-service-command-option.ts",
-          "hash": "18442363838924377594"
+          "hash": "2517082615592579377"
         },
         {
           "file": "src/commands/generate/service/generate-service-runner.ts",
-          "hash": "16183574617860486952"
+          "hash": "7279373368835827230"
         },
         {
           "file": "src/common/app/config.ts",

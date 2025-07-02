@@ -6,11 +6,11 @@ export class GenerateSaasCommandOption extends CoreOptions {
       super(name);
     }
   
-    get type(): string {
+    override get type(): string {
       return Preset.SAAS;
     }
   
-    get targetDir(): string {
+    override get target(): string {
       return this.dir.base;
     }
 

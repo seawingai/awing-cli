@@ -18,12 +18,11 @@ export class CoreRunner {
     }
   
     async run() {
-      console.info(`Started Generating\n${this.options}`);
-      console.info(`Generating ${this.options.type} in: ${this.options.dir.target}`);
+      console.info(`Started Generating ${this.options.type}...\n\n${this.options}`);
   
       this.generate();
   
-      console.info(`Finished generating ${this.options.type} in: ${this.options.dir.target}`);
+      console.info(`Finished Generating ${this.options.type}`);
     }
   
     generate() {}

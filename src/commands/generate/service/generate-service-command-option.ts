@@ -5,15 +5,15 @@ import { CoreOptions, Preset } from "@/commands/core/core-options";
       super(name);
     }
   
-    get type(): string {
+    override get type(): string {
       return Preset.SERVICE;
     }
   
-    get targetDir(): string {
+    override get target(): string {
       return this.dir.services;
     }
 
-    get command(): string {
+    override get command(): string {
       return [
         `npx nx g @nx/node:app ./services/${this.name}`,
         '--framework=fastify',

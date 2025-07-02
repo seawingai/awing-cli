@@ -24,6 +24,10 @@ export class CoreOptions {
     return this.dir.base;
   }
 
+  get target(): string {
+    return this.dir.target;
+  }
+
   get nameDefault(): string {
     return this.dir.baseNormalized.split(/[\\\/]/).pop() || '';
   }

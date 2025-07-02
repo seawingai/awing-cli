@@ -7,8 +7,8 @@ export class GenerateServiceRunner extends CoreRunner {
     }
     
     override generate() {
-      this.ensureDir(this.options.dir.target)
-      this.process.exec(this.options.command, true, this.options.dir.target);
+      this.ensureDir(this.options.target)
+      this.process.exec(this.options.command, true, this.options.target);
     }
   }
   

@@ -8,11 +8,15 @@ export class GenerateLibCommandOption extends CoreOptions {
     this.directory = dir;
   }
 
-  get type(): string {
+  override get type(): string {
     return Preset.LIB;
   }
+    
+  override get target(): string {
+    return this.dir.libs;
+  }
 
-  get command(): string {
+  override get command(): string {
     return [
       `npx nx g @nx/js:lib ${this.directory}/${this.name}`,
       '--unitTestRunner=jest',
