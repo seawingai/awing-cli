@@ -1,1 +1,272 @@
-{}
+{
+  ".": {
+    "root": [
+      "project.json",
+      "nx/core/project-json"
+    ],
+    "targets": [
+      "eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.test": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.test.options": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.test.cache": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.test.inputs": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.test.outputs": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.test.metadata": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.test.executor": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.test.options.cwd": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.test.options.command": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.test.metadata.technologies": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.test.metadata.technologies.0": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.test.metadata.description": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.test.metadata.help": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.test.metadata.help.command": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.test.metadata.help.example": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.cache": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.inputs": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.options": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.metadata": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.executor": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.options.cwd": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.options.command": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.metadata.description": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.metadata.technologies": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.metadata.technologies.0": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.metadata.help": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.metadata.help.command": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.metadata.help.example": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.build-deps": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.build-deps.dependsOn": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.watch-deps": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.watch-deps.continuous": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.watch-deps.dependsOn": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.watch-deps.executor": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.watch-deps.options": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.watch-deps.options.command": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "name": [
+      "project.json",
+      "nx/core/project-json"
+    ],
+    "includedScripts": [
+      "project.json",
+      "nx/core/project-json"
+    ],
+    "tags": [
+      "package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:public": [
+      "package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups": [
+      "package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js": [
+      "package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageName": [
+      "package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageMain": [
+      "package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.isInPackageManagerWorkspaces": [
+      "package.json",
+      "nx/core/package-json"
+    ],
+    "targets.nx-release-publish": [
+      "package.json",
+      "nx/core/package-json"
+    ],
+    "targets.nx-release-publish.executor": [
+      "package.json",
+      "nx/core/package-json"
+    ],
+    "targets.nx-release-publish.dependsOn": [
+      "package.json",
+      "nx/core/package-json"
+    ],
+    "targets.nx-release-publish.options": [
+      "package.json",
+      "nx/core/package-json"
+    ],
+    "$schema": [
+      "project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "project.json",
+      "nx/core/project-json"
+    ],
+    "projectType": [
+      "project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build": [
+      "project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.executor": [
+      "project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.outputs": [
+      "project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options": [
+      "project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.outputPath": [
+      "project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.main": [
+      "project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.tsConfig": [
+      "project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.assets": [
+      "project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint": [
+      "project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint.executor": [
+      "project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint.options": [
+      "project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint.options.command": [
+      "project.json",
+      "nx/core/project-json"
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "awing-cli",
+  "$schema": "node_modules/nx/schemas/project-schema.json",
+  "includedScripts": [],
+  "sourceRoot": "src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/esbuild:esbuild",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist",
+        "main": "./src/index.ts",
+        "tsConfig": "./tsconfig.lib.json",
+        "assets": ["*.md"]
+      }
+    },
+    "lint": {
+      "command": "eslint ./src ./package.json"
+    }
+  }
+}

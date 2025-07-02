@@ -155,3 +155,9 @@ Manage project configuration values in `awing-config.json`.
 ## License
 
 [ISC](./LICENSE)
+
+## Development Setup
+
+```bash
+npx create-nx-workspace@latest awing-cli --preset=ts-standalone --packageManager=pnpm --no-interactive
+```

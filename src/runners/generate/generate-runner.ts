@@ -1,4 +1,4 @@
-import fs from 'fs'
+import * as fs from 'fs'
 import { Process } from '@/common/process/process';
 import { SaasFolder } from '@/common/app/saas-folder';
 

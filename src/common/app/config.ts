@@ -1,6 +1,5 @@
 import * as fs from 'fs';
-import { SaasFolder } from './saas-folder';
-import path from "path";
+import * as path from "path";
 
 export class Config {
   static readonly CONFIG_FILE = path.resolve(process.cwd(), 'awing.json');

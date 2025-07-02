@@ -6,94 +6,204 @@
       "src/*"
     ]
   },
-  "nxJsonPlugins": [],
-  "fileMap": {
-    "projectFileMap": {},
-    "nonProjectFiles": [
-      {
-        "file": ".gitattributes",
-        "hash": "13194702717607086212"
-      },
-      {
-        "file": ".gitignore",
-        "hash": "13404745306227114823"
-      },
-      {
-        "file": ".vscode/launch.json",
-        "hash": "15958134278624664357"
-      },
-      {
-        "file": "LICENSE",
-        "hash": "6141806750151804828"
-      },
-      {
-        "file": "README.md",
-        "hash": "12923686609428185464"
-      },
-      {
-        "file": "awing.json",
-        "hash": "3691503588255798231"
-      },
-      {
-        "file": "package.json",
-        "hash": "8181785474239509186"
-      },
-      {
-        "file": "pnpm-lock.yaml",
-        "hash": "1285332937983515274"
-      },
-      {
-        "file": "scripts/del-abc.ps1",
-        "hash": "15891259060343943843"
-      },
-      {
-        "file": "src/cli.ts",
-        "hash": "4501576859054368682"
-      },
-      {
-        "file": "src/commands/config-command.ts",
-        "hash": "2674392394594331362"
-      },
-      {
-        "file": "src/commands/db-command.ts",
-        "hash": "13850296477144761278"
-      },
-      {
-        "file": "src/commands/generate-command.ts",
-        "hash": "2323873941843208846"
-      },
-      {
-        "file": "src/common/json/json-file.ts",
-        "hash": "9496771154872626743"
-      },
-      {
-        "file": "src/common/process/process.ts",
-        "hash": "17133739293374669986"
-      },
-      {
-        "file": "src/common/types/constants.ts",
-        "hash": "13565484868720656616"
-      },
-      {
-        "file": "src/runners/db/db-migrate-runner.ts",
-        "hash": "3626942742939001803"
-      },
-      {
-        "file": "src/runners/db/db-schema-runner.ts",
-        "hash": "17016725129864995909"
-      },
-      {
-        "file": "src/runners/db/db-seed-runner.ts",
-        "hash": "13599169939987726493"
-      },
-      {
-        "file": "src/runners/generate/generate-runner.ts",
-        "hash": "15504265544206231452"
-      },
-      {
-        "file": "tsconfig.json",
-        "hash": "2144433073988914591"
+  "nxJsonPlugins": [
+    {
+      "name": "@nx/eslint/plugin",
+      "options": {
+        "targetName": "lint"
       }
-    ]
+    },
+    {
+      "name": "@nx/vite/plugin",
+      "options": {
+        "buildTargetName": "build",
+        "testTargetName": "test",
+        "serveTargetName": "serve",
+        "devTargetName": "dev",
+        "previewTargetName": "preview",
+        "serveStaticTargetName": "serve-static",
+        "typecheckTargetName": "typecheck",
+        "buildDepsTargetName": "build-deps",
+        "watchDepsTargetName": "watch-deps"
+      }
+    }
+  ],
+  "fileMap": {
+    "nonProjectFiles": [],
+    "projectFileMap": {
+      "awing-cli": [
+        {
+          "file": ".gitignore",
+          "hash": "6746974787570063356"
+        },
+        {
+          "file": ".npmrc",
+          "hash": "1880664178033616490"
+        },
+        {
+          "file": ".prettierignore",
+          "hash": "14688272390704683536"
+        },
+        {
+          "file": ".prettierrc",
+          "hash": "16267754514737964994"
+        },
+        {
+          "file": ".vscode/extensions.json",
+          "hash": "16884713733442577066"
+        },
+        {
+          "file": "LICENSE",
+          "hash": "6141806750151804828"
+        },
+        {
+          "file": "README.md",
+          "hash": "8855217736457426299"
+        },
+        {
+          "file": "eslint.config.mjs",
+          "hash": "12748119778616337778",
+          "deps": [
+            "npm:@nx/eslint-plugin",
+            [
+              "npm:jsonc-eslint-parser",
+              "dynamic"
+            ]
+          ]
+        },
+        {
+          "file": "make.ps1",
+          "hash": "16581865806831663335"
+        },
+        {
+          "file": "nx.json",
+          "hash": "1426250821205457904"
+        },
+        {
+          "file": "package.json",
+          "hash": "14236845695798228041",
+          "deps": [
+            "npm:@eslint/js",
+            "npm:@nx/esbuild",
+            "npm:@nx/eslint",
+            "npm:@nx/eslint-plugin",
+            "npm:@nx/js",
+            "npm:@nx/vite",
+            "npm:@nx/web",
+            "npm:@nx/workspace",
+            "npm:@swc-node/register",
+            "npm:@swc/core",
+            "npm:@swc/helpers",
+            "npm:@types/node",
+            "npm:@vitest/coverage-v8",
+            "npm:@vitest/ui",
+            "npm:eslint",
+            "npm:eslint-config-prettier",
+            "npm:jiti",
+            "npm:jsonc-eslint-parser",
+            "npm:nx",
+            "npm:prettier",
+            "npm:tslib",
+            "npm:typescript",
+            "npm:typescript-eslint",
+            "npm:vite",
+            "npm:vitest",
+            "npm:commander"
+          ]
+        },
+        {
+          "file": "pnpm-lock.yaml",
+          "hash": "10817372158363750748"
+        },
+        {
+          "file": "project.json",
+          "hash": "2376179226398882984"
+        },
+        {
+          "file": "scripts/del-abc.ps1",
+          "hash": "15891259060343943843"
+        },
+        {
+          "file": "src/cli.ts",
+          "hash": "4352149763793401805",
+          "deps": [
+            "npm:commander"
+          ]
+        },
+        {
+          "file": "src/commands/config-command.ts",
+          "hash": "13440071075202511547",
+          "deps": [
+            "npm:commander"
+          ]
+        },
+        {
+          "file": "src/commands/db-command.ts",
+          "hash": "8828316498217429772",
+          "deps": [
+            "npm:commander"
+          ]
+        },
+        {
+          "file": "src/commands/generate-command.ts",
+          "hash": "1266609472603455063",
+          "deps": [
+            "npm:commander"
+          ]
+        },
+        {
+          "file": "src/common/app/config.ts",
+          "hash": "14365251826719949618"
+        },
+        {
+          "file": "src/common/app/saas-folder.ts",
+          "hash": "9177094775256340150"
+        },
+        {
+          "file": "src/common/process/process.ts",
+          "hash": "17133739293374669986"
+        },
+        {
+          "file": "src/index.ts",
+          "hash": "14441562097677477388"
+        },
+        {
+          "file": "src/runners/db/db-migrate-runner.ts",
+          "hash": "3626942742939001803"
+        },
+        {
+          "file": "src/runners/db/db-schema-runner.ts",
+          "hash": "17016725129864995909"
+        },
+        {
+          "file": "src/runners/db/db-seed-runner.ts",
+          "hash": "13599169939987726493"
+        },
+        {
+          "file": "src/runners/generate/generate-runner.ts",
+          "hash": "11514744533787532064"
+        },
+        {
+          "file": "tsconfig.json",
+          "hash": "17146605397663089806"
+        },
+        {
+          "file": "tsconfig.lib.json",
+          "hash": "10286712170118383374"
+        },
+        {
+          "file": "tsconfig.spec.json",
+          "hash": "3976783976033865585"
+        },
+        {
+          "file": "vite.config.ts",
+          "hash": "12571804729235445422",
+          "deps": [
+            "npm:vite",
+            "npm:@nx/vite"
+          ]
+        }
+      ]
+    }
   }
 }
