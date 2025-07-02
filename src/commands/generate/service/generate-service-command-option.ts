@@ -9,6 +9,10 @@ import { CoreOptions, Preset } from "@/commands/core/core-options";
       return Preset.SERVICE;
     }
   
+    get targetDir(): string {
+      return this.services;
+    }
+
     get command(): string {
       return [
         `npx nx g @nx/node:app ./services/${this.name}`,

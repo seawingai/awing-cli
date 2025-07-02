@@ -80,7 +80,7 @@ export class DbMigrateRunner {
   }
 
   private processService(service: string): void {
-    const schemaPath = this.options.schema;
+    const schemaPath = this.options.schema(service);
 
     if (existsSync(schemaPath)) {
       if (this.shouldSkipSchema(schemaPath)) {

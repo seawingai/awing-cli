@@ -33,31 +33,39 @@ export class CoreOptions {
   }
 
   get saasDir(): string {
-    return join(this.baseDir, this.name);
+    return this.baseDir;
   }
 
   get apps(): string {
-    return join(this.baseDir, this.name, 'apps');
-  }
-
-  get services(): string {
-    return join(this.apps, this.name, 'services');
-  }
-
-  get schema(): string {
-    return join(this.services, 'db', 'schema.prisma');
-  }
-
-  get seeder(): string {
-    return join(this.services, 'db', 'seed', 'db-seeder.ts');
+    return join(this.saasDir, 'apps');
   }
 
   get libs(): string {
-    return join(this.baseDir, this.name, 'libs');
+    return join(this.saasDir, 'libs');
   }
 
-  app(name: string): string {
-    return join(this.apps, name);
+  get services(): string {
+    return join(this.apps, 'services');
+  }
+
+  get web(): string {
+    return join(this.apps, 'web');
+  }
+  
+  schema(serviceName: string): string {
+    return join(this.services, serviceName, 'db', 'schema.prisma');
+  }
+
+  seeder(serviceName: string): string {
+    return join(this.services, serviceName, 'db', 'seed', 'db-seeder.ts');
+  }
+
+  serviceApp(name: string): string {
+    return join(this.services, name);
+  }
+
+  webApp(name: string): string {
+    return join(this.web, name);
   }
 
   lib(name: string): string {
@@ -77,7 +85,7 @@ export class CoreOptions {
   }
 
   toString(): string {
-    return `SaasFolder {
+    return `${this.constructor.name} {
       baseDir: ${this.baseDir},
       saasName: ${this.name},
       saasDir: ${this.saasDir},

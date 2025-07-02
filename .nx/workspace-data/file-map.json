@@ -77,7 +77,7 @@
         },
         {
           "file": "make.ps1",
-          "hash": "16581865806831663335"
+          "hash": "14706160248690146881"
         },
         {
           "file": "nx.json",
@@ -85,13 +85,14 @@
         },
         {
           "file": "package.json",
-          "hash": "10622157406348766044",
+          "hash": "6457807096962070087",
           "deps": [
             "npm:@eslint/js",
             "npm:@nx/esbuild",
             "npm:@nx/eslint",
             "npm:@nx/eslint-plugin",
             "npm:@nx/js",
+            "npm:@nx/node",
             "npm:@nx/vite",
             "npm:@nx/web",
             "npm:@nx/workspace",
@@ -118,7 +119,7 @@
         },
         {
           "file": "pnpm-lock.yaml",
-          "hash": "15598014207045211206"
+          "hash": "8264584619081280446"
         },
         {
           "file": "project.json",
@@ -129,6 +130,21 @@
           "hash": "15891259060343943843"
         },
         {
+          "file": "src/commands/config/README.md",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/commands/config/command/config-command.ts",
+          "hash": "13440071075202511547",
+          "deps": [
+            "npm:commander"
+          ]
+        },
+        {
+          "file": "src/commands/core/README.md",
+          "hash": "3244421341483603138"
+        },
+        {
           "file": "src/commands/core/cli.ts",
           "hash": "15506948619738723326",
           "deps": [
@@ -137,7 +153,7 @@
         },
         {
           "file": "src/commands/core/core-options.ts",
-          "hash": "2632077345377533499"
+          "hash": "4728531587354942411"
         },
         {
           "file": "src/commands/core/core-runner.ts",
@@ -146,6 +162,10 @@
         {
           "file": "src/commands/core/index.ts",
           "hash": "7871212713924473915"
+        },
+        {
+          "file": "src/commands/db/README.md",
+          "hash": "3244421341483603138"
         },
         {
           "file": "src/commands/db/command/db-command.ts",
@@ -164,7 +184,7 @@
         },
         {
           "file": "src/commands/db/migrate/db-migrate-runner.ts",
-          "hash": "7440509319398569202"
+          "hash": "3302757227044989942"
         },
         {
           "file": "src/commands/db/schema/db-schema-command-option.ts",
@@ -172,7 +192,7 @@
         },
         {
           "file": "src/commands/db/schema/db-schema-runner.ts",
-          "hash": "15552919082932871203"
+          "hash": "3387022466369098746"
         },
         {
           "file": "src/commands/db/seed/db-seed-command-option.ts",
@@ -181,6 +201,10 @@
         {
           "file": "src/commands/db/seed/db-seed-runner.ts",
           "hash": "1329033345682121313"
+        },
+        {
+          "file": "src/commands/generate/README.md",
+          "hash": "3244421341483603138"
         },
         {
           "file": "src/commands/generate/command/generate-command.ts",
@@ -203,7 +227,7 @@
         },
         {
           "file": "src/commands/generate/saas/generate-saas-command-option.ts",
-          "hash": "15877560682060577691"
+          "hash": "10408345338404481803"
         },
         {
           "file": "src/commands/generate/saas/generate-saas-runner.ts",
@@ -211,7 +235,7 @@
         },
         {
           "file": "src/commands/generate/service/generate-service-command-option.ts",
-          "hash": "9154966744027733555"
+          "hash": "13405996112813187607"
         },
         {
           "file": "src/commands/generate/service/generate-service-runner.ts",
@@ -228,123 +252,6 @@
         {
           "file": "src/index.ts",
           "hash": "12143391136004678754"
-        },
-        {
-          "file": "src/runners/config/README.md",
-          "hash": "3244421341483603138"
-        },
-        {
-          "file": "src/runners/config/command/config-command.ts",
-          "hash": "13440071075202511547",
-          "deps": [
-            "npm:commander"
-          ]
-        },
-        {
-          "file": "src/runners/core/README.md",
-          "hash": "3244421341483603138"
-        },
-        {
-          "file": "src/runners/core/core-options.ts",
-          "hash": "16452016647975777801"
-        },
-        {
-          "file": "src/runners/core/core-runner.ts",
-          "hash": "12723717170223627477"
-        },
-        {
-          "file": "src/runners/core/index.ts",
-          "hash": "14683565364199871625"
-        },
-        {
-          "file": "src/runners/db/README.md",
-          "hash": "3244421341483603138"
-        },
-        {
-          "file": "src/runners/db/command/db-command.ts",
-          "hash": "12758636586618406721",
-          "deps": [
-            "npm:commander"
-          ]
-        },
-        {
-          "file": "src/runners/db/db-schema-command-option.ts",
-          "hash": "15202812925640813359"
-        },
-        {
-          "file": "src/runners/db/migrate/db-migrate-command-options.ts",
-          "hash": "5538254804952574974"
-        },
-        {
-          "file": "src/runners/db/migrate/db-migrate-runner.ts",
-          "hash": "11167834504941624300"
-        },
-        {
-          "file": "src/runners/db/schema/db-schema-command-option.ts",
-          "hash": "7724523708049787532"
-        },
-        {
-          "file": "src/runners/db/schema/db-schema-runner.ts",
-          "hash": "1980569257881272127"
-        },
-        {
-          "file": "src/runners/db/seed/db-seed-command-option.ts",
-          "hash": "17856601322959064614"
-        },
-        {
-          "file": "src/runners/db/seed/db-seed-runner.ts",
-          "hash": "9705718809553886754"
-        },
-        {
-          "file": "src/runners/generate/README.md",
-          "hash": "3244421341483603138"
-        },
-        {
-          "file": "src/runners/generate/command/generate-command.ts",
-          "hash": "14040197265041581034",
-          "deps": [
-            "npm:commander"
-          ]
-        },
-        {
-          "file": "src/runners/generate/core/generate-core-options.ts",
-          "hash": "3165386876469795657"
-        },
-        {
-          "file": "src/runners/generate/core/generate-core-runner.ts",
-          "hash": "15494763220426550959"
-        },
-        {
-          "file": "src/runners/generate/generate-service-runner.ts",
-          "hash": "3923645395161724014"
-        },
-        {
-          "file": "src/runners/generate/index.ts",
-          "hash": "15115663091553002264"
-        },
-        {
-          "file": "src/runners/generate/lib/generate-lib-command-option.ts",
-          "hash": "2431879780870169772"
-        },
-        {
-          "file": "src/runners/generate/lib/generate-lib-runner.ts",
-          "hash": "16859501542291341432"
-        },
-        {
-          "file": "src/runners/generate/saas/generate-saas-command-option.ts",
-          "hash": "15428820491733077136"
-        },
-        {
-          "file": "src/runners/generate/saas/generate-saas-runner.ts",
-          "hash": "9597483080529148315"
-        },
-        {
-          "file": "src/runners/generate/service/generate-service-command-option.ts",
-          "hash": "1280849879041837369"
-        },
-        {
-          "file": "src/runners/generate/service/generate-service-runner.ts",
-          "hash": "13674962437703530882"
         },
         {
           "file": "tsconfig.json",
@@ -380,15 +287,15 @@
         },
         {
           "file": "xyz/.vscode/extensions.json",
-          "hash": "3833545590435012078"
+          "hash": "4134969992917317260"
         },
         {
           "file": "xyz/README.md",
-          "hash": "11711769900417257573"
+          "hash": "5395457582789742659"
         },
         {
           "file": "xyz/nx.json",
-          "hash": "7984885312398650396"
+          "hash": "16373283381650678443"
         },
         {
           "file": "xyz/package.json",

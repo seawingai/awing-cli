@@ -12,7 +12,7 @@ export class DbSchemaRunner extends CoreRunner {
     console.info('Running prisma-generate');
 
     for (const service of readdirSync(this.options.services)) {
-      const schemaPath = this.options.schema;
+      const schemaPath = this.options.schema(service);
       if (existsSync(schemaPath)) {
         console.info(`prisma-generate for: ${schemaPath}`);
         this.process.exec(`npx prisma generate --schema=${schemaPath}`, true, this.options.services);
