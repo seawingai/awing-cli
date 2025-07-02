@@ -7,7 +7,12 @@ export class Process {
         }
 
         try {
-            execSync(command, { stdio: 'inherit', cwd });
+            const options: any = {
+                stdio: log ? 'inherit' : 'pipe',
+                shell: process.env.ComSpec || 'cmd.exe',
+            };
+            if (cwd) options.cwd = cwd;
+            execSync(command, options);
         } catch (error) {
             console.error('[Failed]:', error);
             process.exit(1);

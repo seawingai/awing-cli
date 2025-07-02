@@ -1,7 +1,7 @@
 import { Command } from 'commander';
-import { DbCommand } from '@/commands/db-command';
-import { GenerateCommand } from '@/commands/generate-command';
-import { ConfigCommand } from '@/commands/config-command';
+import { DbCommand } from '@/commands/db/command/db-command';
+import { GenerateCommand } from '@/commands/generate/command/generate-command';
+import { ConfigCommand } from '@/commands/config/command/config-command';
 
 export class Cli {
   private program: Command;

@@ -1,13 +1,7 @@
 import { Command } from 'commander';
-import { DbSeedCommandOption, DbSeedRunner } from '@/runners/db/db-seed-runner';
-import { DbMigrateCommandOptions, DbMigrateRunner } from '@/runners/db/db-migrate-runner';
-import { DbSchemaRunner } from '@/runners/db/db-schema-runner';
-import { SaasFolder } from '@/common/app/saas-folder';
+import { DbSeedCommandOption, DbSeedRunner, DbMigrateCommandOptions, DbMigrateRunner, DbSchemaCommandOption, DbSchemaRunner } from '@/commands/db';
 
 export function DbCommand(): Command {
-  const folder = new SaasFolder();
-  const servicesDir = folder.apps;
-
   const command = new Command('db')
     .description('db related commands');
 
@@ -19,9 +13,7 @@ export function DbCommand(): Command {
     .command('up [table]')
     .description('Apply seeds for all services, optionally for a specific table')
     .action(async (table: string | undefined) => {
-      const options = new DbSeedCommandOption({ table });
-      options.command = 'up';
-      options.servicesDir = servicesDir;
+      const options = new DbSeedCommandOption('up', table);
       const runner = new DbSeedRunner(options);
       await runner.run();
     });
@@ -30,9 +22,7 @@ export function DbCommand(): Command {
     .command('down [table]')
     .description('Rollback seeds for all services, optionally for a specific table')
     .action(async (table: string | undefined) => {
-      const options = new DbSeedCommandOption({ table });
-      options.command = 'down';
-      options.servicesDir = servicesDir;
+      const options = new DbSeedCommandOption('down', table);
       const runner = new DbSeedRunner(options);
       await runner.run();
     });
@@ -45,7 +35,6 @@ export function DbCommand(): Command {
     .option('--env <env>', 'Environment (dev or prod)', 'dev')
     .action(async (opt: {service?: string, table?: string, env?: string}) => {
       const options = new DbMigrateCommandOptions(opt)
-      options.servicesDir = servicesDir;
       const runner = new DbMigrateRunner(options);
       runner.run();
     });
@@ -54,7 +43,8 @@ export function DbCommand(): Command {
     .command('schema')
     .description('Run prisma generate for all service schemas')
     .action(async () => {
-      const runner = new DbSchemaRunner({servicesDir});
+      const options = new DbSchemaCommandOption();
+      const runner = new DbSchemaRunner(options);
       await runner.run();
     });
 

@@ -3494,6 +3494,15 @@
         "hash": "sha512-sTSfBjoXBp89JvIKIefqw7U2CCebsc74kiY6awiGogKtoSGbgjYE/G/+l9sF3MWFPNc9IcoOC4ODfKHfxFmp0g=="
       }
     },
+    "npm:get-tsconfig": {
+      "type": "npm",
+      "name": "npm:get-tsconfig",
+      "data": {
+        "version": "4.10.1",
+        "packageName": "get-tsconfig",
+        "hash": "sha512-auHyJ4AgMz7vgS8Hp3N6HXSmlMdUyhSUrfBF16w153rxtLIEOE+HGqaBppczZvnHLqQJfiHotCYpNhl0lUROFQ=="
+      }
+    },
     "npm:glob-parent@5.1.2": {
       "type": "npm",
       "name": "npm:glob-parent@5.1.2",
@@ -4736,6 +4745,15 @@
         "hash": "sha512-pb/MYmXstAkysRFx8piNI1tGFNQIFA3vkE3Gq4EuA1dF6gHp/+vgZqsCGJapvy8N3Q+4o7FwvquPJcnZ7RYy4g=="
       }
     },
+    "npm:resolve-pkg-maps": {
+      "type": "npm",
+      "name": "npm:resolve-pkg-maps",
+      "data": {
+        "version": "1.0.0",
+        "packageName": "resolve-pkg-maps",
+        "hash": "sha512-seS2Tj26TBVOC2NIc2rOe2y2ZO7efxITtLZcGSOnHHNOQ7CkiUBfw0Iw2ck6xkIhPwLhKNLS8BO+hEpngQlqzw=="
+      }
+    },
     "npm:resolve.exports": {
       "type": "npm",
       "name": "npm:resolve.exports",
@@ -5240,6 +5258,15 @@
         "hash": "sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w=="
       }
     },
+    "npm:tsx": {
+      "type": "npm",
+      "name": "npm:tsx",
+      "data": {
+        "version": "4.20.3",
+        "packageName": "tsx",
+        "hash": "sha512-qjbnuR9Tr+FJOMBqJCW5ehvIo/buZq7vH7qD7JziU98h6l3qGy0a/yPFjwO+y0/T7GFpNgNAvEcPPVfyT8rrPQ=="
+      }
+    },
     "npm:type-check": {
       "type": "npm",
       "name": "npm:type-check",
@@ -5639,6 +5666,11 @@
       {
         "source": "awing-cli",
         "target": "npm:tslib",
+        "type": "static"
+      },
+      {
+        "source": "awing-cli",
+        "target": "npm:tsx",
         "type": "static"
       },
       {
@@ -10164,6 +10196,13 @@
         "type": "static"
       }
     ],
+    "npm:get-tsconfig": [
+      {
+        "source": "npm:get-tsconfig",
+        "target": "npm:resolve-pkg-maps",
+        "type": "static"
+      }
+    ],
     "npm:glob-parent@5.1.2": [
       {
         "source": "npm:glob-parent@5.1.2",
@@ -11634,6 +11673,23 @@
         "type": "static"
       }
     ],
+    "npm:tsx": [
+      {
+        "source": "npm:tsx",
+        "target": "npm:esbuild",
+        "type": "static"
+      },
+      {
+        "source": "npm:tsx",
+        "target": "npm:get-tsconfig",
+        "type": "static"
+      },
+      {
+        "source": "npm:tsx",
+        "target": "npm:fsevents",
+        "type": "static"
+      }
+    ],
     "npm:type-check": [
       {
         "source": "npm:type-check",
@@ -11782,6 +11838,11 @@
       {
         "source": "npm:vite",
         "target": "npm:jiti",
+        "type": "static"
+      },
+      {
+        "source": "npm:vite",
+        "target": "npm:tsx",
         "type": "static"
       },
       {
@@ -12041,5 +12102,5 @@
   },
   "version": "6.0",
   "errors": [],
-  "computedAt": 1751460842548
+  "computedAt": 1751470702303
 }
