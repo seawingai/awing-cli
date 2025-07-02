@@ -33,5 +33,6 @@ export function GenerateCommand(): Command {
       const runner = new GenerateLibRunner(options);
       await runner.run();
     });
+    
   return command;
 }

@@ -12,7 +12,7 @@ export class DbSeedRunner {
   }
 
   async runSeederForService(serviceName: string, command: string, tableArg?: string): Promise<void> {
-    const servicePath = join(this.options.services, serviceName);
+    const servicePath = join(this.options.dir.services, serviceName);
     const seederPath = join(servicePath, 'db', 'seed', 'db-seeder.ts');
     if (!existsSync(seederPath)) {
       console.log(`No seeder found for service: ${serviceName}`);
@@ -29,11 +29,11 @@ export class DbSeedRunner {
       const seeder = new SeederClass();
       if (command === 'up') {
         const cmd = `npx ts-node --transpile-only ${seederPath} up ${tableArg ?? ''}`;
-        this.process.exec(cmd, true, this.options.services);
+        this.process.exec(cmd, true, this.options.dir.services);
         console.log(`Seed up completed for service: ${serviceName}`);
       } else if (command === 'down') {
         const cmd = `npx ts-node --transpile-only ${seederPath} down ${tableArg ?? ''}`;
-        this.process.exec(cmd, true, this.options.services);
+        this.process.exec(cmd, true, this.options.dir.services);
         console.log(`Seed down completed for service: ${serviceName}`);
       }
     } catch (error) {
@@ -45,7 +45,7 @@ export class DbSeedRunner {
   async runSeeders(command: string, tableArg?: string): Promise<void> {
     try {
       console.log(`Starting seed ${command} for all services...`);
-      const serviceDirs = readdirSync(this.options.services, { withFileTypes: true })
+      const serviceDirs = readdirSync(this.options.dir.services, { withFileTypes: true })
         .filter(dirent => dirent.isDirectory())
         .map(dirent => dirent.name);
       if (serviceDirs.length === 0) {

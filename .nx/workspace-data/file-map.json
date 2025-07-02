@@ -65,6 +65,38 @@
           "hash": "8855217736457426299"
         },
         {
+          "file": "__template/.editorconfig",
+          "hash": "5443105041930014821"
+        },
+        {
+          "file": "__template/.gitignore",
+          "hash": "18435103667633526488"
+        },
+        {
+          "file": "__template/.npmrc",
+          "hash": "1880664178033616490"
+        },
+        {
+          "file": "__template/.vscode/extensions.json",
+          "hash": "4134969992917317260"
+        },
+        {
+          "file": "__template/README.md",
+          "hash": "8989815716845563049"
+        },
+        {
+          "file": "__template/nx.json",
+          "hash": "7396505290730967976"
+        },
+        {
+          "file": "__template/package.json",
+          "hash": "14034488263634520755"
+        },
+        {
+          "file": "__template/pnpm-lock.yaml",
+          "hash": "14590838583663998678"
+        },
+        {
           "file": "eslint.config.mjs",
           "hash": "12748119778616337778",
           "deps": [
@@ -146,18 +178,22 @@
         },
         {
           "file": "src/commands/core/cli.ts",
-          "hash": "15506948619738723326",
+          "hash": "18433443930302353294",
           "deps": [
             "npm:commander"
           ]
         },
         {
           "file": "src/commands/core/core-options.ts",
-          "hash": "4728531587354942411"
+          "hash": "3384978851153522097"
         },
         {
           "file": "src/commands/core/core-runner.ts",
-          "hash": "1898949417456600412"
+          "hash": "3588456335013394724"
+        },
+        {
+          "file": "src/commands/core/dir.ts",
+          "hash": "12090652242179530458"
         },
         {
           "file": "src/commands/core/index.ts",
@@ -184,7 +220,7 @@
         },
         {
           "file": "src/commands/db/migrate/db-migrate-runner.ts",
-          "hash": "3302757227044989942"
+          "hash": "8635931295694452353"
         },
         {
           "file": "src/commands/db/schema/db-schema-command-option.ts",
@@ -192,7 +228,7 @@
         },
         {
           "file": "src/commands/db/schema/db-schema-runner.ts",
-          "hash": "3387022466369098746"
+          "hash": "5190189510113265910"
         },
         {
           "file": "src/commands/db/seed/db-seed-command-option.ts",
@@ -200,7 +236,7 @@
         },
         {
           "file": "src/commands/db/seed/db-seed-runner.ts",
-          "hash": "1329033345682121313"
+          "hash": "10744169096858176147"
         },
         {
           "file": "src/commands/generate/README.md",
@@ -208,7 +244,7 @@
         },
         {
           "file": "src/commands/generate/command/generate-command.ts",
-          "hash": "12529941786893433359",
+          "hash": "6438179110581526199",
           "deps": [
             "npm:commander"
           ]
@@ -219,27 +255,27 @@
         },
         {
           "file": "src/commands/generate/lib/generate-lib-command-option.ts",
-          "hash": "15351164305905267992"
+          "hash": "15476534924879239005"
         },
         {
           "file": "src/commands/generate/lib/generate-lib-runner.ts",
-          "hash": "15392849209719798301"
+          "hash": "7307332242449827936"
         },
         {
           "file": "src/commands/generate/saas/generate-saas-command-option.ts",
-          "hash": "10408345338404481803"
+          "hash": "5481555926021926404"
         },
         {
           "file": "src/commands/generate/saas/generate-saas-runner.ts",
-          "hash": "8672886791417578783"
+          "hash": "3365497796154338330"
         },
         {
           "file": "src/commands/generate/service/generate-service-command-option.ts",
-          "hash": "13405996112813187607"
+          "hash": "18442363838924377594"
         },
         {
           "file": "src/commands/generate/service/generate-service-runner.ts",
-          "hash": "3945192127227904364"
+          "hash": "16183574617860486952"
         },
         {
           "file": "src/common/app/config.ts",
@@ -248,6 +284,10 @@
         {
           "file": "src/common/process/process.ts",
           "hash": "2566259566503268347"
+        },
+        {
+          "file": "src/common/types/str.ts",
+          "hash": "1627519025867705992"
         },
         {
           "file": "src/index.ts",
@@ -272,38 +312,6 @@
             "npm:vite",
             "npm:@nx/vite"
           ]
-        },
-        {
-          "file": "xyz/.editorconfig",
-          "hash": "5443105041930014821"
-        },
-        {
-          "file": "xyz/.gitignore",
-          "hash": "18435103667633526488"
-        },
-        {
-          "file": "xyz/.npmrc",
-          "hash": "1880664178033616490"
-        },
-        {
-          "file": "xyz/.vscode/extensions.json",
-          "hash": "4134969992917317260"
-        },
-        {
-          "file": "xyz/README.md",
-          "hash": "5395457582789742659"
-        },
-        {
-          "file": "xyz/nx.json",
-          "hash": "16373283381650678443"
-        },
-        {
-          "file": "xyz/package.json",
-          "hash": "15841445847371708191"
-        },
-        {
-          "file": "xyz/pnpm-lock.yaml",
-          "hash": "14590838583663998678"
         }
       ]
     }

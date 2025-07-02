@@ -1,11 +1,11 @@
 import { CoreOptions, Preset } from "@/commands/core/core-options";
  
 export class GenerateLibCommandOption extends CoreOptions {
-  dir: string;
+  directory: string;
 
   constructor(name: string, dir: string) {
     super(name);
-    this.dir = dir;
+    this.directory = dir;
   }
 
   get type(): string {
@@ -14,7 +14,7 @@ export class GenerateLibCommandOption extends CoreOptions {
 
   get command(): string {
     return [
-      `npx nx g @nx/js:lib ${this.dir}/${this.name}`,
+      `npx nx g @nx/js:lib ${this.directory}/${this.name}`,
       '--unitTestRunner=jest',
       '--eslint=false',
       '--prettier=false',

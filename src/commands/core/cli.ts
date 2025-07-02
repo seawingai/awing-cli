@@ -26,5 +26,3 @@ export class Cli {
   }
 }
 
-  new Cli().run(process.argv);
-

@@ -19,11 +19,11 @@ export class CoreRunner {
   
     async run() {
       console.info(`Started Generating\n${this.options}`);
-      console.info(`Generating ${this.options.type} in: ${this.options.targetDir}`);
+      console.info(`Generating ${this.options.type} in: ${this.options.dir.target}`);
   
       this.generate();
   
-      console.info(`Finished generating ${this.options.type} in: ${this.options.targetDir}`);
+      console.info(`Finished generating ${this.options.type} in: ${this.options.dir.target}`);
     }
   
     generate() {}

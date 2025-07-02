@@ -11,11 +11,11 @@ export class GenerateSaasCommandOption extends CoreOptions {
     }
   
     get targetDir(): string {
-      return this.baseDir;
+      return this.dir.base;
     }
 
-    override get saasDir(): string {
-      return join(this.baseDir, this.name);
+    override get saas(): string {
+      return join(this.dir.base, this.name);
     }
 
     get command(): string {

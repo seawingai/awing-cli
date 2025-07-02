@@ -7,11 +7,11 @@ export class GenerateSaasRunner extends CoreRunner {
   }
   
   override generate() {
-    this.process.exec(this.options.command, true, this.options.baseDir);
+    this.process.exec(this.options.command, true, this.options.dir.base);
 
-    this.process.exec(`pnpm add -D @nx/node`, true, this.options.targetDir);
+    this.process.exec(`pnpm add -D @nx/node`, true, this.options.dir.target);
 
-    this.ensureDir(this.options.apps);
-    this.ensureDir(this.options.libs);
+    this.ensureDir(this.options.dir.apps);
+    this.ensureDir(this.options.dir.libs);
   }
 }

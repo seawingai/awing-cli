@@ -10,7 +10,7 @@ import { CoreOptions, Preset } from "@/commands/core/core-options";
     }
   
     get targetDir(): string {
-      return this.services;
+      return this.dir.services;
     }
 
     get command(): string {
