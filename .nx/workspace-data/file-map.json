@@ -65,18 +65,6 @@
           "hash": "8855217736457426299"
         },
         {
-          "file": "data/templates/lib/default/.gitkeep",
-          "hash": "3244421341483603138"
-        },
-        {
-          "file": "data/templates/saas/default/.gitkeep",
-          "hash": "3244421341483603138"
-        },
-        {
-          "file": "data/templates/service/default/.gitkeep",
-          "hash": "3244421341483603138"
-        },
-        {
           "file": "eslint.config.mjs",
           "hash": "12748119778616337778",
           "deps": [
@@ -135,7 +123,7 @@
         },
         {
           "file": "project.json",
-          "hash": "2376179226398882984"
+          "hash": "5364143433421287396"
         },
         {
           "file": "scripts/del-abc.ps1",
@@ -165,7 +153,7 @@
         },
         {
           "file": "src/commands/core/core-options.ts",
-          "hash": "10627729766747579941"
+          "hash": "2602659160422042772"
         },
         {
           "file": "src/commands/core/core-runner.ts",
@@ -224,7 +212,7 @@
         },
         {
           "file": "src/commands/generate/command/generate-command.ts",
-          "hash": "6438179110581526199",
+          "hash": "8996232908214449660",
           "deps": [
             "npm:commander"
           ]
@@ -235,7 +223,7 @@
         },
         {
           "file": "src/commands/generate/lib/generate-lib-command-option.ts",
-          "hash": "8004039271724498996"
+          "hash": "3067492945034586603"
         },
         {
           "file": "src/commands/generate/lib/generate-lib-runner.ts",
@@ -243,7 +231,7 @@
         },
         {
           "file": "src/commands/generate/saas/generate-saas-command-option.ts",
-          "hash": "17680071548920988297"
+          "hash": "13809886506950624777"
         },
         {
           "file": "src/commands/generate/saas/generate-saas-runner.ts",
@@ -251,7 +239,7 @@
         },
         {
           "file": "src/commands/generate/service/generate-service-command-option.ts",
-          "hash": "2517082615592579377"
+          "hash": "2183363644346157269"
         },
         {
           "file": "src/commands/generate/service/generate-service-runner.ts",
@@ -279,11 +267,11 @@
         },
         {
           "file": "tsconfig.lib.json",
-          "hash": "10286712170118383374"
+          "hash": "50632191866439761"
         },
         {
           "file": "tsconfig.spec.json",
-          "hash": "3976783976033865585"
+          "hash": "13191784588463835671"
         },
         {
           "file": "vite.config.ts",

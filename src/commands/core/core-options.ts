@@ -10,14 +10,16 @@ export enum Preset {
 export class CoreOptions {
   dir: Dir;
   name: string;
+  template: string;
 
-  constructor(name?: string, baseDir?: string) {
+  constructor(name?: string, baseDir?: string, template: string = 'default') {
     if (!name) {
       name = this.nameDefault;
     }
 
     this.dir = new Dir(baseDir);
-    this.name = name; 
+    this.name = name;
+    this.template = template;
   }
 
   get saas(): string {

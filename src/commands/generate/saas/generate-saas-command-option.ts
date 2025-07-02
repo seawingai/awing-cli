@@ -2,8 +2,8 @@ import { CoreOptions, Preset } from "@/commands/core/core-options";
 import { join } from "path";
  
 export class GenerateSaasCommandOption extends CoreOptions {
-    constructor(name: string) {
-      super(name);
+    constructor(name: string, template: string = 'default') {
+      super(name, null, template);
     }
   
     override get type(): string {

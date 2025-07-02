@@ -3,8 +3,8 @@ import { CoreOptions, Preset } from "@/commands/core/core-options";
 export class GenerateLibCommandOption extends CoreOptions {
   directory: string;
 
-  constructor(name: string, dir: string) {
-    super(name);
+  constructor(name: string, dir: string, template: string = 'default') {
+    super(name, null, template);
     this.directory = dir;
   }
 

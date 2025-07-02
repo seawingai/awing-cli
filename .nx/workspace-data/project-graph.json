@@ -127,7 +127,12 @@
               "main": "./src/index.ts",
               "tsConfig": "./tsconfig.lib.json",
               "assets": [
-                "*.md"
+                "*.md",
+                {
+                  "input": "src/assets",
+                  "glob": "**/*",
+                  "output": "assets"
+                }
               ]
             },
             "configurations": {},
@@ -15632,5 +15637,5 @@
   },
   "version": "6.0",
   "errors": [],
-  "computedAt": 1751478043603
+  "computedAt": 1751479430835
 }

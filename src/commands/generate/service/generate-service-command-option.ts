@@ -1,8 +1,8 @@
 import { CoreOptions, Preset } from "@/commands/core/core-options";
 
  export class GenerateServiceCommandOption extends CoreOptions {
-    constructor(name: string) {
-      super(name);
+    constructor(name: string, template: string = 'default') {
+      super(name, null, template);
     }
   
     override get type(): string {

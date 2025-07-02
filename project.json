@@ -13,7 +13,14 @@
         "outputPath": "dist",
         "main": "./src/index.ts",
         "tsConfig": "./tsconfig.lib.json",
-        "assets": ["*.md"]
+        "assets": [
+          "*.md",
+          {
+            "input": "src/assets",
+            "glob": "**/*",
+            "output": "assets"
+          }
+        ]
       }
     },
     "lint": {
