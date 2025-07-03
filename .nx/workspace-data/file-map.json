@@ -130,6 +130,18 @@
           "hash": "15891259060343943843"
         },
         {
+          "file": "src/assets/templates/lib/default/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/assets/templates/saas/default/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/assets/templates/service/default/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
           "file": "src/commands/config/README.md",
           "hash": "3244421341483603138"
         },
@@ -231,7 +243,7 @@
         },
         {
           "file": "src/commands/generate/saas/generate-saas-command-option.ts",
-          "hash": "13809886506950624777"
+          "hash": "3212964580139572766"
         },
         {
           "file": "src/commands/generate/saas/generate-saas-runner.ts",

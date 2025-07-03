@@ -29,12 +29,12 @@ export class GenerateSaasCommandOption extends CoreOptions {
         '--ci=skip',
         '--cache=true',
         '--packageManager=pnpm',
-        '--no-interactive',
         '--defaultBase=main',
         '--useProjectJson=true',
         '--workspaces=true',
         '--workspaceType=integrated',
         `--tags=saas`,
+        '--no-interactive'
       ].join(' ');
     }
   
