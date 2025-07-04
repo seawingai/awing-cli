@@ -44,19 +44,11 @@ export class Dir {
         return join(this.services, serviceName, 'db', 'seed', 'db-seeder.ts');
     }
 
-    serviceApp(name: string): string {
-        return join(this.services, name);
+    target(parent: string, name: string): string {
+        return join(parent, name);
     }
 
-    webApp(name: string): string {
-        return join(this.web, name);
-    }
-
-    lib(name: string): string {
-        return join(this.libs, name);
-    }
-
-    get target(): string {
+    get parent(): string {
         return '';
     }
 

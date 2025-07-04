@@ -10,12 +10,8 @@ export class GenerateSaasCommandOption extends CoreOptions {
       return Preset.SAAS;
     }
   
-    override get target(): string {
+    override get parent(): string {
       return this.dir.base;
-    }
-
-    override get saas(): string {
-      return join(this.dir.base, this.name);
     }
 
     get command(): string {

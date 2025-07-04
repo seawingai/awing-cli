@@ -9,13 +9,13 @@ import { CoreOptions, Preset } from "@/commands/core/core-options";
       return Preset.SERVICE;
     }
   
-    override get target(): string {
+    override get parent(): string {
       return this.dir.services;
     }
 
     override get command(): string {
       return [
-        `npx nx g @nx/node:app ./services/${this.name}`,
+        `npx nx g @nx/node:app ${this.name}`,
         '--framework=fastify',
         '--unitTestRunner=none',
         '--eslint=false',

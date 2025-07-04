@@ -1,5 +1,306 @@
 {
   "nodes": {
+    "marketing-service": {
+      "name": "marketing-service",
+      "type": "app",
+      "data": {
+        "root": "src/assets/templates/service/default",
+        "targets": {
+          "lint": {
+            "cache": true,
+            "options": {
+              "cwd": "src/assets/templates/service/default",
+              "command": "eslint ."
+            },
+            "inputs": [
+              "default",
+              "^default",
+              "{workspaceRoot}/eslint.config.mjs",
+              "{workspaceRoot}/tools/eslint-rules/**/*",
+              {
+                "externalDependencies": [
+                  "eslint"
+                ]
+              }
+            ],
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "metadata": {
+              "technologies": [
+                "eslint"
+              ],
+              "description": "Runs ESLint on project",
+              "help": {
+                "command": "pnpm exec eslint --help",
+                "example": {
+                  "options": {
+                    "max-warnings": 0
+                  }
+                }
+              }
+            },
+            "executor": "nx:run-commands",
+            "configurations": {},
+            "parallelism": true
+          },
+          "build": {
+            "executor": "@nx/esbuild:esbuild",
+            "outputs": [
+              "{options.outputPath}"
+            ],
+            "defaultConfiguration": "production",
+            "options": {
+              "platform": "node",
+              "outputPath": "dist/__target__",
+              "format": [
+                "cjs"
+              ],
+              "bundle": false,
+              "main": "__target__/src/main.ts",
+              "tsConfig": "__target__/tsconfig.app.json",
+              "assets": [
+                "__target__/src/assets"
+              ],
+              "generatePackageJson": true,
+              "esbuildOptions": {
+                "sourcemap": true,
+                "outExtension": {
+                  ".js": ".js"
+                }
+              }
+            },
+            "configurations": {
+              "development": {},
+              "production": {
+                "esbuildOptions": {
+                  "sourcemap": false,
+                  "outExtension": {
+                    ".js": ".js"
+                  }
+                }
+              }
+            },
+            "parallelism": true,
+            "cache": true,
+            "dependsOn": [
+              "^build"
+            ],
+            "inputs": [
+              "production",
+              "^production"
+            ]
+          },
+          "serve": {
+            "continuous": true,
+            "executor": "@nx/js:node",
+            "defaultConfiguration": "development",
+            "dependsOn": [
+              "build"
+            ],
+            "options": {
+              "buildTarget": "marketing-service:build",
+              "runBuildTargetDependencies": false
+            },
+            "configurations": {
+              "development": {
+                "buildTarget": "marketing-service:build:development"
+              },
+              "production": {
+                "buildTarget": "marketing-service:build:production"
+              }
+            },
+            "parallelism": true
+          }
+        },
+        "name": "marketing-service",
+        "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "__target__/src",
+        "projectType": "application",
+        "tags": [
+          "service"
+        ],
+        "implicitDependencies": []
+      }
+    },
+    "__name__": {
+      "name": "__name__",
+      "type": "lib",
+      "data": {
+        "root": "src/assets/templates/lib/default",
+        "targets": {
+          "lint": {
+            "cache": true,
+            "options": {
+              "cwd": "src/assets/templates/lib/default",
+              "command": "eslint ."
+            },
+            "inputs": [
+              "default",
+              "^default",
+              "{workspaceRoot}/eslint.config.mjs",
+              "{workspaceRoot}/src/assets/templates/lib/default/eslint.config.mjs",
+              "{workspaceRoot}/tools/eslint-rules/**/*",
+              {
+                "externalDependencies": [
+                  "eslint"
+                ]
+              }
+            ],
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "metadata": {
+              "technologies": [
+                "eslint"
+              ],
+              "description": "Runs ESLint on project",
+              "help": {
+                "command": "pnpm exec eslint --help",
+                "example": {
+                  "options": {
+                    "max-warnings": 0
+                  }
+                }
+              }
+            },
+            "executor": "nx:run-commands",
+            "configurations": {},
+            "parallelism": true
+          },
+          "build": {
+            "executor": "@nx/js:tsc",
+            "outputs": [
+              "{options.outputPath}"
+            ],
+            "options": {
+              "outputPath": "dist/__target__",
+              "main": "__target__/src/index.ts",
+              "tsConfig": "__target__/tsconfig.lib.json",
+              "assets": [
+                "__target__/*.md"
+              ]
+            },
+            "configurations": {},
+            "parallelism": true,
+            "cache": true,
+            "dependsOn": [
+              "^build"
+            ],
+            "inputs": [
+              "production",
+              "^production"
+            ]
+          }
+        },
+        "name": "__name__",
+        "tags": [
+          "npm:private",
+          "lib"
+        ],
+        "metadata": {
+          "targetGroups": {},
+          "js": {
+            "packageName": "@awing/__name__",
+            "packageMain": "./src/index.js",
+            "isInPackageManagerWorkspaces": false
+          }
+        },
+        "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "__target__/src",
+        "projectType": "library",
+        "implicitDependencies": []
+      }
+    },
+    "test": {
+      "name": "test",
+      "type": "lib",
+      "data": {
+        "root": "test",
+        "targets": {
+          "lint": {
+            "cache": true,
+            "options": {
+              "cwd": "test",
+              "command": "eslint ."
+            },
+            "inputs": [
+              "default",
+              "^default",
+              "{workspaceRoot}/eslint.config.mjs",
+              "{workspaceRoot}/test/eslint.config.mjs",
+              "{workspaceRoot}/tools/eslint-rules/**/*",
+              {
+                "externalDependencies": [
+                  "eslint"
+                ]
+              }
+            ],
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "metadata": {
+              "technologies": [
+                "eslint"
+              ],
+              "description": "Runs ESLint on project",
+              "help": {
+                "command": "pnpm exec eslint --help",
+                "example": {
+                  "options": {
+                    "max-warnings": 0
+                  }
+                }
+              }
+            },
+            "executor": "nx:run-commands",
+            "configurations": {},
+            "parallelism": true
+          },
+          "build": {
+            "executor": "@nx/js:tsc",
+            "outputs": [
+              "{options.outputPath}"
+            ],
+            "options": {
+              "outputPath": "dist/test",
+              "main": "test/src/index.ts",
+              "tsConfig": "test/tsconfig.lib.json",
+              "assets": [
+                "test/*.md"
+              ]
+            },
+            "configurations": {},
+            "parallelism": true,
+            "cache": true,
+            "dependsOn": [
+              "^build"
+            ],
+            "inputs": [
+              "production",
+              "^production"
+            ]
+          }
+        },
+        "name": "test",
+        "tags": [
+          "npm:private",
+          "lib"
+        ],
+        "metadata": {
+          "targetGroups": {},
+          "js": {
+            "packageName": "@awing/test",
+            "packageMain": "./src/index.js",
+            "isInPackageManagerWorkspaces": false
+          }
+        },
+        "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "test/src",
+        "projectType": "library",
+        "implicitDependencies": []
+      }
+    },
     "awing-cli": {
       "name": "awing-cli",
       "type": "lib",
@@ -6758,6 +7059,31 @@
     }
   },
   "dependencies": {
+    "marketing-service": [],
+    "__name__": [
+      {
+        "source": "__name__",
+        "target": "npm:jsonc-eslint-parser",
+        "type": "dynamic"
+      },
+      {
+        "source": "__name__",
+        "target": "npm:tslib",
+        "type": "static"
+      }
+    ],
+    "test": [
+      {
+        "source": "test",
+        "target": "npm:jsonc-eslint-parser",
+        "type": "dynamic"
+      },
+      {
+        "source": "test",
+        "target": "npm:tslib",
+        "type": "static"
+      }
+    ],
     "awing-cli": [
       {
         "source": "awing-cli",
@@ -15637,5 +15963,5 @@
   },
   "version": "6.0",
   "errors": [],
-  "computedAt": 1751524305874
+  "computedAt": 1751609709782
 }

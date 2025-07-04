@@ -12,17 +12,13 @@ export class GenerateLibCommandOption extends CoreOptions {
     return Preset.LIB;
   }
     
-  override get target(): string {
-    return this.dir.libs;
+  override get parent(): string {
+    return this.directory ? `${this.dir.libs}/${this.directory}` : this.dir.libs;
   }
-    
-  get finalName(): string {
-    return this.directory ? `${this.directory}/${this.name}` : this.name;
-  }
-
+        
   override get command(): string {
     return [
-      `npx nx g @nx/js:lib ${this.finalName}`,
+      `npx nx g @nx/js:lib ${this.name}`,
       '--unitTestRunner=jest',
       '--eslint=false',
       '--prettier=false',

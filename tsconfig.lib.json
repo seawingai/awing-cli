@@ -7,7 +7,7 @@
   },
   "include": ["src/**/*.ts"],
   "exclude": [
-    "src/data",
+    "src/assets",
     "vite.config.ts",
     "vite.config.mts",
     "vitest.config.ts",

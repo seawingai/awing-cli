@@ -6,9 +6,9 @@ export class GenerateServiceRunner extends CoreRunner {
       super(options);
     }
     
-    override generate() {
-      this.ensureDir(this.options.target)
-      this.process.exec(this.options.command, true, this.options.target);
+    override generateNx() {
+      this.ensureDir(this.options.parent)
+      this.process.exec(this.options.command, true, this.options.parent);
     }
   }
   

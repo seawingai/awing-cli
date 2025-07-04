@@ -1,6 +1,7 @@
 import { Process } from "@/common/process/process";
 import { CoreOptions } from "@/commands/core/core-options";
 import * as fs from 'fs';
+import { TokenManager } from "../template/token-manager";
 
 export class CoreRunner {
     protected options: CoreOptions;
@@ -25,6 +26,25 @@ export class CoreRunner {
       console.info(`Finished Generating ${this.options.type}`);
     }
   
-    generate() {}
+
+    generate() {
+      switch (this.options.template.name) {
+        case 'nx`':
+          this.generateNx();
+          break;
+        default:
+          this.generateTemplate();
+          break;
+      }
+    }
+  
+    generateNx() {
+
+    }
+  
+    generateTemplate() {
+      const manager = new TokenManager(this.options);
+      manager.process();
+    }
   }
   

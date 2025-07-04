@@ -31,6 +31,61 @@
   "fileMap": {
     "nonProjectFiles": [],
     "projectFileMap": {
+      "__name__": [
+        {
+          "file": "src/assets/templates/lib/default/README.md",
+          "hash": "11467603833830352250"
+        },
+        {
+          "file": "src/assets/templates/lib/default/eslint.config.mjs",
+          "hash": "7345095763397854775",
+          "deps": [
+            [
+              "npm:jsonc-eslint-parser",
+              "dynamic"
+            ]
+          ]
+        },
+        {
+          "file": "src/assets/templates/lib/default/jest.config.ts",
+          "hash": "12890585048549950674"
+        },
+        {
+          "file": "src/assets/templates/lib/default/package.json",
+          "hash": "12384372083947618177",
+          "deps": [
+            "npm:tslib"
+          ]
+        },
+        {
+          "file": "src/assets/templates/lib/default/project.json",
+          "hash": "15504415485234425902"
+        },
+        {
+          "file": "src/assets/templates/lib/default/src/index.ts",
+          "hash": "12717051916183665202"
+        },
+        {
+          "file": "src/assets/templates/lib/default/src/lib/__name__.spec.ts",
+          "hash": "11216057533352956275"
+        },
+        {
+          "file": "src/assets/templates/lib/default/src/lib/__name__.ts",
+          "hash": "7279281873946720820"
+        },
+        {
+          "file": "src/assets/templates/lib/default/tsconfig.json",
+          "hash": "7464751594463448890"
+        },
+        {
+          "file": "src/assets/templates/lib/default/tsconfig.lib.json",
+          "hash": "17931682505218601317"
+        },
+        {
+          "file": "src/assets/templates/lib/default/tsconfig.spec.json",
+          "hash": "12671384051532635711"
+        }
+      ],
       "awing-cli": [
         {
           "file": ".gitignore",
@@ -76,7 +131,7 @@
           ]
         },
         {
-          "file": "make.ps1",
+          "file": "install.ps1",
           "hash": "14706160248690146881"
         },
         {
@@ -130,15 +185,7 @@
           "hash": "15891259060343943843"
         },
         {
-          "file": "src/assets/templates/lib/default/.gitkeep",
-          "hash": "3244421341483603138"
-        },
-        {
           "file": "src/assets/templates/saas/default/.gitkeep",
-          "hash": "3244421341483603138"
-        },
-        {
-          "file": "src/assets/templates/service/default/.gitkeep",
           "hash": "3244421341483603138"
         },
         {
@@ -165,15 +212,15 @@
         },
         {
           "file": "src/commands/core/core-options.ts",
-          "hash": "2602659160422042772"
+          "hash": "17319123003629752397"
         },
         {
           "file": "src/commands/core/core-runner.ts",
-          "hash": "15930276848210132573"
+          "hash": "486552245797984227"
         },
         {
           "file": "src/commands/core/dir.ts",
-          "hash": "12090652242179530458"
+          "hash": "7049946144926891610"
         },
         {
           "file": "src/commands/core/index.ts",
@@ -235,27 +282,35 @@
         },
         {
           "file": "src/commands/generate/lib/generate-lib-command-option.ts",
-          "hash": "3067492945034586603"
+          "hash": "3818749383176097786"
         },
         {
           "file": "src/commands/generate/lib/generate-lib-runner.ts",
-          "hash": "5414253902462802576"
+          "hash": "8884180345932761436"
         },
         {
           "file": "src/commands/generate/saas/generate-saas-command-option.ts",
-          "hash": "3212964580139572766"
+          "hash": "13097883594544544174"
         },
         {
           "file": "src/commands/generate/saas/generate-saas-runner.ts",
-          "hash": "3365497796154338330"
+          "hash": "10160253457900139059"
         },
         {
           "file": "src/commands/generate/service/generate-service-command-option.ts",
-          "hash": "2183363644346157269"
+          "hash": "6063195220997172208"
         },
         {
           "file": "src/commands/generate/service/generate-service-runner.ts",
-          "hash": "7279373368835827230"
+          "hash": "14994721345685019914"
+        },
+        {
+          "file": "src/commands/template/template.ts",
+          "hash": "15834978977567617620"
+        },
+        {
+          "file": "src/commands/template/token-manager.ts",
+          "hash": "11088091133185170964"
         },
         {
           "file": "src/common/app/config.ts",
@@ -279,11 +334,11 @@
         },
         {
           "file": "tsconfig.lib.json",
-          "hash": "50632191866439761"
+          "hash": "6326971383702583298"
         },
         {
           "file": "tsconfig.spec.json",
-          "hash": "13191784588463835671"
+          "hash": "18377900036359644772"
         },
         {
           "file": "vite.config.ts",
@@ -292,6 +347,99 @@
             "npm:vite",
             "npm:@nx/vite"
           ]
+        }
+      ],
+      "marketing-service": [
+        {
+          "file": "src/assets/templates/service/default/project.json",
+          "hash": "14446942825354698967"
+        },
+        {
+          "file": "src/assets/templates/service/default/src/app/app.ts",
+          "hash": "14518793766668130454"
+        },
+        {
+          "file": "src/assets/templates/service/default/src/app/plugins/sensible.ts",
+          "hash": "491110684765192562"
+        },
+        {
+          "file": "src/assets/templates/service/default/src/app/routes/root.ts",
+          "hash": "9956480318952685898"
+        },
+        {
+          "file": "src/assets/templates/service/default/src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/assets/templates/service/default/src/main.ts",
+          "hash": "4320313004805346698"
+        },
+        {
+          "file": "src/assets/templates/service/default/src/sdk/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/assets/templates/service/default/tsconfig.app.json",
+          "hash": "626201926230120943"
+        },
+        {
+          "file": "src/assets/templates/service/default/tsconfig.json",
+          "hash": "13557132311663658676"
+        }
+      ],
+      "test": [
+        {
+          "file": "test/README.md",
+          "hash": "18101888103789451831"
+        },
+        {
+          "file": "test/eslint.config.mjs",
+          "hash": "7345095763397854775",
+          "deps": [
+            [
+              "npm:jsonc-eslint-parser",
+              "dynamic"
+            ]
+          ]
+        },
+        {
+          "file": "test/jest.config.ts",
+          "hash": "16286250864533814567"
+        },
+        {
+          "file": "test/package.json",
+          "hash": "5573173522306614201",
+          "deps": [
+            "npm:tslib"
+          ]
+        },
+        {
+          "file": "test/project.json",
+          "hash": "3260284367019504719"
+        },
+        {
+          "file": "test/src/index.ts",
+          "hash": "1749924728758744018"
+        },
+        {
+          "file": "test/src/lib/test.spec.ts",
+          "hash": "12357562444013456181"
+        },
+        {
+          "file": "test/src/lib/test.ts",
+          "hash": "6369048854485302975"
+        },
+        {
+          "file": "test/tsconfig.json",
+          "hash": "7464751594463448890"
+        },
+        {
+          "file": "test/tsconfig.lib.json",
+          "hash": "17931682505218601317"
+        },
+        {
+          "file": "test/tsconfig.spec.json",
+          "hash": "12671384051532635711"
         }
       ]
     }
